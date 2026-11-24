@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN" data-palmverse>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080D20" />
+    <meta name="description" content="Summer 的宇宙。以双手塑造一片独立演化的数字宇宙。所有感知在本地完成。" />
+    <title>Summer’s Universe · Summer 的宇宙</title>
+    <link rel="stylesheet" href="/src/ui/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <canvas id="universe" aria-label="可实时交互的三维宇宙 / Interactive three-dimensional universe"></canvas>
+    <div id="interface">
+      <header>
+        <a class="brand" href="#" aria-label="Summer 的宇宙首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C17 12 20 15 30 16C20 17 17 20 16 30C15 20 12 17 2 16C12 15 15 12 16 2Z"/><circle cx="16" cy="16" r="10"/></svg><span>SUMMER’S UNIVERSE<small>Summer 的宇宙</small></span></a>
+        <button id="guide-button" class="text-button" aria-controls="guide" aria-expanded="false">手势指南 <span>Gesture guide</span><span class="guide-mark">?</span></button>
+      </header>
+      <section id="invitation" aria-label="开始体验">
+        <p class="opening-line">The universe begins where your fingertips end.</p>
+        <h1 lang="en">Summer’s<br/>Universe</h1>
+        <p class="intro">聚拢星尘，唤醒引力。<br class="mobile-break"/>让一个新的生命，从你的掌心诞生。</p>
+        <div class="entry-actions">
+          <button id="start-camera" class="primary">开启掌中宇宙 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg><small>Begin with your hands</small></button>
+          <button id="start-mouse" class="text-button">先用鼠标探索 <span>Explore with a mouse ↗</span></button>
+        </div>
+        <p class="privacy">摄像头与手势数据仅在本地处理 · 不上传，不录制</p>
+      </section>
+      <div id="experience" hidden>
+        <div id="status" aria-live="polite"><span class="status-dot"></span><div><span id="mode-label">鼠标模式</span><span class="separator">/</span><span id="state-label">自由漂流</span><small id="hint">移动鼠标聚拢星尘 · 按住积蓄能量 · 双击孕育生命</small></div></div>
+        <nav class="controls" aria-label="体验控制">
+          <button id="camera-button" class="icon-button" title="开启摄像头 / Camera" aria-label="开启摄像头 / Camera" aria-pressed="false"></button>
+          <div class="sound-controls"><button id="sound-button" class="icon-button" title="静音 / Mute" aria-label="静音 / Mute" aria-pressed="false"></button><input id="volume" type="range" min="0" max="1" step=".01" value=".32" aria-label="音量 / Volume" title="音量 / Volume"/></div>
+          <span class="control-divider"></span>
+          <button id="capture-button" class="icon-button" title="保存宇宙指纹 / Save PNG" aria-label="保存宇宙指纹 / Save PNG"></button>
+          <button id="fullscreen-button" class="icon-button" title="全屏 / Full screen" aria-label="全屏 / Full screen"></button>
+          <button id="reset-button" class="icon-button" title="重启宇宙 / Restart" aria-label="重启宇宙 / Restart"></button>
+        </nav>
+      </div>
+      <div id="toast" role="status" aria-live="polite"></div>
+      <div id="fatal" hidden><h2>这片宇宙暂时无法展开</h2><p id="fatal-text"></p><p>请使用支持 WebGL 2 的 Chrome 或 Safari，并开启硬件加速。</p></div>
+      <dialog id="guide">
+        <div class="guide-header"><div><span class="small-caps">A LITTLE FIELD GUIDE</span><h2>以双手，书写万象。</h2></div><button id="close-guide" class="icon-button" aria-label="关闭指南 / Close guide">×</button></div>
+        <div class="guide-rows">
+          <article><span class="gesture-glyph">☼</span><div><h3>聚灵 <em>Attraction</em></h3><p>张开一只手，让星尘随掌心流动。</p><small>Open a palm. Move gently to gather stardust.</small></div></article>
+          <article><span class="gesture-glyph">◉</span><div><h3>坍缩与释能 <em>Collapse & release</em></h3><p>先聚拢，缓慢握拳积蓄，再张手释放。</p><small>Gather, close your palm, then open to release.</small></div></article>
+          <article><span class="gesture-glyph">↔</span><div><h3>拓界 <em>Expansion</em></h3><p>双手张开，拉远或靠近，改变宇宙尺度。</p><small>Move two open palms apart or together.</small></div></article>
+          <article><span class="gesture-glyph butterfly-glyph">⋈</span><div><h3>生命诞生 <em>Awakening</em></h3><p>单手伸出拇指、食指和中指，收起另外两指。<br/>掌心朝向镜头，保持约半秒，蝴蝶就会飞出。</p><small>Show your thumb, index and middle finger for half a second.</small></div></article>
+        </div>
+        <div class="mouse-guide"><span>鼠标也能创造宇宙</span><p>移动 · 聚灵　按住约两秒再松开 · 释能<br/>滚轮 · 拓界　双击 · 生命诞生</p><small>Move to attract · Hold & release · Scroll to expand · Double-click for life</small></div>
+        <p class="guide-note">保持双手完整入镜，距离摄像头约 40–80 cm。无需展示面部。<br/>Hands only. All processing stays on this device.</p>
+      </dialog>
+      <aside id="preview" hidden><video id="camera-video" autoplay muted playsinline aria-label="本地摄像头预览"></video><button id="close-preview" aria-label="隐藏预览 / Hide preview">×</button><span>本地预览 / Local only</span></aside>
+      <button id="preview-button" class="text-button" hidden>查看取景 / Preview</button>
+    </div>
+    <script type="module" src="/src/core/main.js"></script>
+  </body>
+</html>

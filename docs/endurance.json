@@ -1,0 +1,106 @@
+{
+  "browser": "157.0.8103.79",
+  "viewport": [
+    1440,
+    900
+  ],
+  "samples": [
+    {
+      "sec": 0.005,
+      "frames": 0,
+      "stalls": 0,
+      "usedMiB": 3.66
+    },
+    {
+      "sec": 60.015,
+      "frames": 3601,
+      "stalls": 0,
+      "usedMiB": 4.9
+    },
+    {
+      "sec": 120.013,
+      "frames": 7201,
+      "stalls": 0,
+      "usedMiB": 4.73
+    },
+    {
+      "sec": 180.011,
+      "frames": 10801,
+      "stalls": 0,
+      "usedMiB": 4.46
+    },
+    {
+      "sec": 240.012,
+      "frames": 14402,
+      "stalls": 0,
+      "usedMiB": 4.73
+    },
+    {
+      "sec": 300.012,
+      "frames": 18002,
+      "stalls": 0,
+      "usedMiB": 5.21
+    },
+    {
+      "sec": 360.012,
+      "frames": 21602,
+      "stalls": 0,
+      "usedMiB": 4.53
+    },
+    {
+      "sec": 420.01,
+      "frames": 25202,
+      "stalls": 0,
+      "usedMiB": 4.75
+    },
+    {
+      "sec": 480.016,
+      "frames": 28803,
+      "stalls": 0,
+      "usedMiB": 5.26
+    },
+    {
+      "sec": 540.012,
+      "frames": 32403,
+      "stalls": 0,
+      "usedMiB": 4.6
+    },
+    {
+      "sec": 600.007,
+      "frames": 36003,
+      "stalls": 0,
+      "usedMiB": 4.71
+    },
+    {
+      "sec": 659.928,
+      "frames": 39603,
+      "stalls": 0,
+      "usedMiB": 4.81
+    },
+    {
+      "sec": 720.012,
+      "frames": 43209,
+      "stalls": 0,
+      "usedMiB": 4.56
+    },
+    {
+      "sec": 780.01,
+      "frames": 46809,
+      "stalls": 0,
+      "usedMiB": 5.14
+    },
+    {
+      "sec": 840.012,
+      "frames": 50409,
+      "stalls": 0,
+      "usedMiB": 4.9
+    },
+    {
+      "sec": 900.009,
+      "frames": 54009,
+      "stalls": 0,
+      "usedMiB": 4.64
+    }
+  ],
+  "errors": []
+}
